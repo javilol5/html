@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!DOCTYPE parrafos [
+    <!ELEMENT parrafos (parrafo+)>
+    <!ATTLIST parrafo cursiva CDATA #IMPLIED>
+    <!ATTLIST parrafo negrita CDATA #IMPLIED>
+    <!ELEMENT parrafos (#PCDATA)>
+]> 
+
+<parrafos>
+    <parrafo cursiva="true">
+        hola soy un parrafo 1 en cursiva
+    </parrafo>
+    <parrafo negrita="true">
+        hola soy un parrafo 2 en negrita
+    </parrafo>
+    <parrafo cursiva="true" negrita="true">
+        hola soy un parrafo 3 en cursiva y negrita
+    </parrafo>
+</parrafos>

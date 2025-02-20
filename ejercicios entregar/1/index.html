@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Libro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Publicar Libro</h1>
+        <form action="publicarLibro.php" method="POST">
+            <label for="titulo">Título del libro:</label>
+            <input type="text" id="titulo" name="titulo" required>
+
+            <label for="autor">Autor:</label>
+            <input type="text" id="autor" name="autor" required>
+
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria" required>
+                <option value=""></option>
+                <option value="arte">Arte</option>
+                <option value="ciencia">Ciencia</option>
+                <option value="comic">Cómic</option>
+                <option value="filologia">Filología</option>
+                <option value="idiomas">Idiomas</option>
+                <option value="ingenieria">Ingeniería</option>
+                <option value="literatura">Literatura</option>
+                <option value="ocio">Ocio</option>
+                <option value="deporte">Deporte</option>
+                <option value="salud">Salud</option>
+                <option value="dieta">Dieta</option>
+                <option value="autoayuda">Autoayuda</option>
+                <option value="cocina">Cocina</option>
+                <option value="derecho">Derecho</option>
+                <option value="infantil">Infantil</option>
+                <option value="juvenil">Juvenil</option>
+                <option value="literatura">Literatura</option>
+                <option value="economia">Economía</option>
+                <option value="historia">Historia</option>
+                <option value="informatica">Informática</option>
+                <option value="medicina">Medicina</option>
+                <option value="psicologia">Psicología</option>
+            </select>
+<!-- sacado de aqui https://www.casadellibro.com/tematicas?srsltid=AfmBOorc8lmO2WXkNzeqh9NigKephzp0035kB8d0GY0MOwP4m-F4Ge5I-->
+            <label for="fecha">Fecha de inicio de lectura:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label>Marcas sobre el libro:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="leido" name="leido" value="1">
+                <label for="leido">Leído</label>
+                <input type="checkbox" id="favorito" name="favorito" value="1">
+                <label for="favorito">Favorito</label>
+            </div>
+
+            <button type="submit">Publicar</button>
+        </form>
+    </div>
+</body>
+</html>
