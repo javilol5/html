@@ -1,0 +1,23 @@
+body{
+    background-color: rgb(200, 200, 200);
+}
+
+#botones{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100vw; 
+}
+
+#botones button {
+    flex: 1;              
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#botones button:focus {
+    background-color: blue;
+    outline: none;
+}
