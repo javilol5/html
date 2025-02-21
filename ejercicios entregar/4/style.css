@@ -5,19 +5,24 @@ body{
 #botones{
     display: flex;
     justify-content: space-evenly;
-    width: 100vw; 
+    width: 100%;
+    gap: 15px;
 }
 
 #botones button {
-    flex: 1;              
+    flex: 1;     
     padding: 15px;
     font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
+}
+
+#botones button:focus + button {
+    background-color: yellow;
+}
+
+#botones:focus-within button {
+    background-color: red;
 }
 
 #botones button:focus {
     background-color: blue;
-    outline: none;
-}
+}   
