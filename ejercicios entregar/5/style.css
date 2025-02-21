@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(200, 200, 200);
+}
+
+#contenedor {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 60%;
+    max-width: 600px;
+}
+
+#contenedor img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#contenedor h2 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: auto;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+#flechaI, #flechaD {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100px;
+    background: transparent;
+    color: solid;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s, color 0.25s;
+}
+
+#flechaI {
+    left: 0;
+}
+
+#flechaD {
+    right: 0;
+}
+
+#flechaI:hover, #flechaD:hover {
+    background: rgba(0, 0, 0, 0.6);
+    color: black;
+}
