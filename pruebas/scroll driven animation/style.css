@@ -49,9 +49,9 @@ ul[scroll-animation="bulge"] {
     }
 
     .demo ul {
-        perspective: 1000px;
+        perspective: 1000px; /* Como de cerca se ve el efecto 3D */
         max-block-size: 100%;
-        aspect-ratio: 9/16;
+        aspect-ratio: 9/16; /* El ratio de diferencia entre el seleccionado y el resto */
         overflow-y: auto;
         overflow-x: hidden;
         overscroll-behavior-x: contain;
@@ -68,7 +68,7 @@ ul[scroll-animation="bulge"] {
     .demo ul li {
         display: grid;
         align-content: center;
-        padding: 10px;
+        padding: 10px;  /* Altura de elemento */
         background: var(--theme-foreground-faintest);
         max-inline-size: unset;
     }
@@ -103,5 +103,5 @@ ul[scroll-animation="bulge"] {
 body {
     font-size: 1rem;
     font-family: system-ui, sans-serif;
-    line-height: 1.5;
+    line-height: 1.5;   /* Eltura de líneas */
 }
