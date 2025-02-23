@@ -1,0 +1,107 @@
+@import "https://unpkg.com/open-props" layer(support.design-system);
+
+ul[scroll-animation="bulge"] {
+    --_animation: bulge;
+}
+
+[scroll-animation="bulge"] > li {
+    animation-range: unset;
+}
+
+@keyframes bulge {
+    entry 0% {
+        transform: translateZ(-1000px);
+        z-index: -10;
+    }
+    
+    entry 300% {
+        transform: translateZ(0);
+        z-index: 0;
+    }
+
+    exit -200% {
+        transform: translateZ(0);
+    }
+
+    exit 100% {
+        transform: translateZ(-1000px);
+    }
+}
+
+/* Estructura del diseño */
+@layer support.demo {
+    .demos {
+        display: grid;
+        gap: var(--size-5);
+        place-content: start;
+        grid-template-columns: repeat(auto-fill, minmax(var(--size-content-1), 1fr));
+    }
+
+    .demo {
+        display: grid;
+        gap: var(--size-1);
+        grid-template-rows: auto 1fr;
+    }
+
+    .demo h3 {
+        font-size: var(--font-size-1);
+        margin: 0;
+    }
+
+    .demo ul {
+        perspective: 1000px;
+        max-block-size: 100%;
+        aspect-ratio: 9/16;
+        overflow-y: auto;
+        overflow-x: hidden;
+        overscroll-behavior-x: contain;
+        border: 1px solid var(--theme-background-alt);
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        --_row-size: 2.5lh;
+        display: grid;
+        grid-auto-rows: var(--_row-size);
+    }
+
+    .demo ul li {
+        display: grid;
+        align-content: center;
+        padding: 10px;
+        background: var(--theme-foreground-faintest);
+        max-inline-size: unset;
+    }
+
+    .demo ul li:nth-child(even) {
+        background: var(--theme-foreground-fainter);
+    }
+}
+
+/* Efecto de animación al hacer scroll */
+@media (prefers-reduced-motion: no-preference) {
+    ul > li {
+        animation: var(--_animation) linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 200%;
+    }
+}
+
+/* Tema y colores */
+@layer framework.theme {
+    @media (prefers-color-scheme: light) {
+        :root {
+            --theme-foreground: #1c3957;
+            --theme-background-a: #f4faff;
+            --theme-foreground-fainter: color-mix(in srgb, var(--theme-foreground) 30%, var(--theme-background-a));
+            --theme-foreground-faintest: color-mix(in srgb, var(--theme-foreground) 14%, var(--theme-background-a));
+        }
+    }
+}
+
+/* Estilos generales */
+body {
+    font-size: 1rem;
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+}
