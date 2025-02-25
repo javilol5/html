@@ -1,0 +1,44 @@
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+.tabla {
+    display: flex;
+    flex-direction: column;
+    border: 4px solid black;
+}
+
+.fila {
+    display: flex;
+}
+
+.celda1 {
+    flex: 1;
+    padding: 10px;
+    border-bottom: 4px solid black;
+    border-right: 4px solid black;
+    text-align: center;
+    background-color: red;
+}
+
+.celda {
+    flex: 1;
+    padding: 10px;
+    border-right: 4px solid black;
+    border-left: 4px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+    background-color: cyan;
+}
+
+
+.encabezado {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}

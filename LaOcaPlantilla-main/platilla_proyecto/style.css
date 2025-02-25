@@ -1,0 +1,186 @@
+body {
+    display: flex;
+    align-items: flex-start; 
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.contenedorTablero {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); 
+    grid-template-rows: repeat(10, 1fr); 
+    gap: 13px; 
+    width: 800px; 
+    height: 800px; 
+    background-size: cover;
+	position: relative;
+    
+}
+
+.contenedorTablero {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    border: 1px solid black;
+    gap: 13px;
+}
+
+
+.numero {
+    display: flex;
+    align-items: top;
+    justify-content: right;     
+    font-size: 12px;
+    font-weight: bold;
+    border : 1px;
+    }
+
+#tableroFondo{
+	grid-column: 1 / 11;
+	grid-row: 1 / 11;
+	height:auto;
+	width: 100%;
+}
+
+#oca1{
+	grid-column: 9;
+	grid-row: 11;
+	height:auto;
+	width: 100%;
+}
+
+#oca2{
+	grid-column: 10;
+	grid-row: 2;
+	height:auto;
+	width: 100%;
+}
+
+#oca3{
+	grid-column: 2;
+	grid-row: 1;
+	height:auto;
+	width: 100%;
+}
+
+#oca4{
+	grid-column: 1;
+	grid-row: 9;
+	height:auto;
+	width: 100%;
+}
+
+#oca5{
+	grid-column: 9;
+	grid-row: 9;
+	height:auto;
+	width: 100%;
+}
+
+#oca6{
+	grid-column: 6;
+	grid-row: 2;
+	height:auto;
+	width: 100%;
+}
+
+#puente1{
+	grid-column: 6;
+	grid-row: 11;
+	height:auto;
+	width: 100%;
+}
+
+#puente2{
+	grid-column: 10;
+	grid-row: 8;
+	height:auto;
+	width: 100%;
+}
+
+#muerto{
+	grid-column: 2;
+	grid-row: 2;
+	height:auto;
+	width: 100%;
+}
+
+#pozo{
+	grid-column: 1;
+	grid-row: 4;
+	height:auto;
+	width: 100%;
+}
+
+#hotel{
+	grid-column: 10;
+	grid-row: 1;
+	height:auto;
+	width: 100%;
+}
+
+#perro{
+	grid-column: 7;
+	grid-row: 11;
+	height:auto;
+	width: 100%;
+}
+
+#barco{
+	grid-column: 1;
+	grid-row: 11;
+	height:auto;
+	width: 100%;
+}
+
+#dedal{
+	grid-column: 2;
+	grid-row: 10;
+	height:auto;
+	width: 100%;
+}
+
+#caballo{
+	grid-column: 3;
+	grid-row: 11;
+	height:auto;
+	width: 100%;
+}
+
+.menuTablero{
+	display: grid;
+	grid-template-columns: 820px auto;
+}
+
+.contenedorTablero{
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.menu{
+	grid-column: 2;
+	grid-row: 1;
+}
+
+.puntuaciones{
+	
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+	border: 1px solid cyan;
+	width: 500px;
+	text-align: center;
+}
+
+tr:nth-child(1) {
+	background-color: blue;
+	color: white;
+}
+
+tr:nth-child(2), 
+tr:nth-child(4) {
+	background-color: cyan;
